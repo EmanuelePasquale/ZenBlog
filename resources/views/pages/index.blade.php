@@ -483,6 +483,5 @@
             </div> <!-- End .row -->
           </div>
         </section><!-- End Lifestyle Category Section -->
-    
       </main><!-- End #main -->
     </x-layout>
