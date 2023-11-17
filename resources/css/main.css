@@ -5,6 +5,19 @@
 * Author: BootstrapMade.com
 * License: https:///bootstrapmade.com/license/
 */
+.bg-image-vertical {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: auto 100%;
+  }
+  
+  @media (min-width: 1025px) {
+  .h-custom-2 {
+  height: 100%;
+  }
+  }
 
 /**
 * Check out variables.css for easy customization of colors, typography, and other repetitive properties
@@ -12,6 +25,8 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+
 :root {
   scroll-behavior: smooth;
 }
@@ -925,9 +940,7 @@ section {
 /*--------------------------------------------------------------
 # Comments
 --------------------------------------------------------------*/
-.comment {
-  /* Font not working in <textarea> for this version of bs */
-}
+
 
 .comment .avatar {
   position: relative;
