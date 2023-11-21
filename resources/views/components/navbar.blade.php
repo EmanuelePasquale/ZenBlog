@@ -10,8 +10,12 @@
 
           <nav id="navbar" class="navbar">
               <ul>
-                  <li><a class="nav-item @if (Route::currentRouteName() == 'homepage') active @endif">Home</a></li>
-                  <li><a href="single-post.html">Single Post</a></li>
+                  <li class="nav-item @if (Route::currentRouteName() == 'homepage') active @endif"><a class="nav-link"
+                          aria-current="page" href="{{ route('homepage') }}">Home</a></li>
+                          @auth
+                          <li class="nav-item @if (Route::currentRouteName() == 'articles.create') active @endif"><a class="nav-link"
+                          aria-current="page" href="{{ route('articles.index') }}">Inserisci articolo</a></li>
+                          @endauth
                   <li class="dropdown"><a href="category.html"><span>Categories</span> <i
                               class="bi bi-chevron-down dropdown-indicator"></i></a>
                       <ul>
