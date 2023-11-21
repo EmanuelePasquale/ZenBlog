@@ -12,7 +12,7 @@
   background-position: right center;
   background-size: auto 100%;
   }
-  
+
   @media (min-width: 1025px) {
   .h-custom-2 {
   height: 100%;
@@ -227,7 +227,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Desktop Navigation 
+# Desktop Navigation
 --------------------------------------------------------------*/
 @media (min-width: 1280px) {
   .navbar {
@@ -373,6 +373,20 @@ section {
     display: none;
     position: absolute;
     inset: 55px 15px 15px 15px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 10px;
+    background-color: var(--color-white);
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+  }
+  .navbar .login_out {
+    flex-direction:column;
+    display: none;
+    position: absolute;
+    top: 225px;
+    left: 15px;
     padding: 10px 0;
     margin: 0;
     border-radius: 10px;
