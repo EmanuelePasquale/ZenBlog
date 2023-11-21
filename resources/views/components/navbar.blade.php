@@ -14,7 +14,7 @@
                           aria-current="page" href="{{ route('homepage') }}">Home</a></li>
                   @auth
                       <li class="nav-item @if (Route::currentRouteName() == 'articles.create') active @endif"><a class="nav-link"
-                              aria-current="page" href="{{ route('articles.index') }}">Inserisci articolo</a></li>
+                              aria-current="page" href="{{ route('articles.create') }}">Inserisci articolo</a></li>
                   @endauth
                   <li class="dropdown"><a href="category.html"><span>Categories</span> <i
                               class="bi bi-chevron-down dropdown-indicator"></i></a>
@@ -40,26 +40,29 @@
                   <li><a href="about.html">About</a></li>
                   <li><a href="contact.html">Contact</a></li>
               </ul>
-               <!-- .Login/LogOut -->
-          <div class="login_out d-flex direction-row w-25 justify-content-end ">
-            @guest
-                <div class="nav-item">
-                    <a class="btn" href="{{ route('login') }}">Login</a>
-                </div>
-                <div class="nav-item">
-                    <a class="btn" href="{{ route('register') }}">Register</a>
-                </div>
-            @else
-                <div class="nav-item">
-                    <form action="{{ route('logout') }}" method="POST">
-                        @csrf
-                        <a class="btn logout" onclick="event.preventDefault(); this.closest('form').submit();">
-                            Logout
-                        </a>
-                    </form>
-                </div>
-            @endguest
-        </div>
+              <!-- .Login/LogOut -->
+              <div class="login_out d-flex direction-row w-25 justify-content-end">
+                  @guest
+                      <div class="nav-item">
+                          <a class="btn" href="{{ route('login') }}">Login</a>
+                      </div>
+                      <div class="nav-item">
+                          <a class="btn" href="{{ route('register') }}">Register</a>
+                      </div>
+                  @else
+                      <li>
+                          <span>{{ Auth::user()->name }}</span>
+                      </li>
+                      <div class="nav-item">
+                          <form action="{{ route('logout') }}" method="POST">
+                              @csrf
+                              <a class="btn logout" onclick="event.preventDefault(); this.closest('form').submit();">
+                                  Logout
+                              </a>
+                          </form>
+                      </div>
+                  @endguest
+              </div>
           </nav><!-- .navbar -->
 
           <div class="position-relative">

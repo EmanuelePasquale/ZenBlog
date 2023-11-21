@@ -2,25 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
     public function index()
     {
-
-        return view('pages.index');
-    }
-
-    public function register()
-    {
-
-        return view('auth.register');
-    }
-
-    public function login()
-    {
-
-        return view('auth.login');
+        $articles=Article::orderBy('created_at','desc')->take(6)->get();
+        return view('pages.index' , compact('articles'));
     }
 }

@@ -156,5 +156,8 @@ return [
             // 'window' => 0,
         ]),
     ],
+    'redirects' => [
+        'logout'=>'/'
+        ]
 
 ];
