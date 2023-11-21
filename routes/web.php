@@ -18,8 +18,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PageController::class,'index'])->name('homepage');
 
+//login e resistrazione
 Route::get('/register', [PageController::class,'register'])->name('register');
-
 Route::get('/login', [PageController::class,'login'])->name('login');
 
-Route::get('/articles', [ArticleController::class,'index'])->name('articles.index');
+//articoli
+Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
+Route::get('/articles/create', [ArticleController::class,'create'])->name('articles.create');
