@@ -38,14 +38,16 @@
               </ul>
           </nav><!-- .navbar -->
           <!-- .Login/LogOut -->
-          @guest
-              <div class="nav-item">
-                  <a class="btn " href="{{ route('login') }}">Login</a>
-              </div>
-              <div class="nav-item">
-                <a class="btn " href="{{ route('register') }}">Register</a>
-            </div>
-          @endguest
+          <div class="d-flex ">
+              @guest
+                  <div class="nav-item">
+                      <a class="btn " href="{{ route('login') }}">Login</a>
+                  </div>
+                  <div class="nav-item">
+                      <a class="btn " href="{{ route('register') }}">Register</a>
+                  </div>
+              @endguest
+          </div>
           <div class="position-relative">
               <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
               <a href="#" class="mx-2"><span class="bi-twitter-x"></span></a>
