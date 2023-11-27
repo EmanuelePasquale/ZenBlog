@@ -175,6 +175,19 @@ section {
   opacity: 0;
 }
 
+.nick {
+    padding-right: 30px;
+}
+
+.nickname {
+    font-size: 19px;
+    color:rgb(27, 142, 27);
+}
+
+
+a.logout {
+    justify-content: center;   }
+
 .search-form-wrap .search-form {
   position: relative;
 }
