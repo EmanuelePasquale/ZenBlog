@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\PageController;
 use App\Models\Article;
@@ -22,5 +23,5 @@ Route::get('/', [PageController::class,'index'])->name('homepage');
 
 //articoli
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
-Route::get('/articles/create', [ArticleController::class,'create'])->name('articles.create');
+Route::get('/new/announcement', [AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
 Route::post('articles/store', [ArticleController::class, 'store'] )->name('articles.store');
