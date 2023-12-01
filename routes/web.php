@@ -18,10 +18,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PageController::class,'index'])->name('homepage');
+Route::get('/', [PageController::class,'homepage'])->name('homepage');
 
 
 //articoli
 Route::get('/articles', [ArticleController::class, 'index'])->name('articles.index');
-Route::get('/new/announcement', [AnnouncementController::class,'createAnnouncement'])->name('announcements.create');
+Route::get('/new/announcement', [ArticleController::class,'create'])->name('articles.create');
+Route::get('/new/show', [ArticleController::class,'show'])->name('articles.show');
 Route::post('articles/store', [ArticleController::class, 'store'] )->name('articles.store');

@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 
 class PageController extends Controller
 {
-    public function index()
+    public function homepage()
     {
         $articles=Article::orderBy('created_at','desc')->take(6)->get();
-        return view('pages.index' , compact('articles'));
+        return view('pages.homepage' , compact('articles'));
     }
 }
